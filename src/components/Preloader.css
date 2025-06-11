@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@600&display=swap');
+
+.preloader-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* default black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+  transition: background-color 1s ease;
+}
+
+/* When logo appears, background turns white */
+.logo-section {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 1s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.6s ease-in forwards;
+}
+
+/* Intro words */
+.intro-word {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 10rem;
+  color: white;
+  opacity: 0;
+  animation: fadeZoom 0.8s ease forwards;
+}
+
+/* Logo */
+.nss-logo {
+  width: 120px;
+  height: auto;
+  animation: logoZoom 0.8s ease forwards;
+  /* margin-bottom: 0.3rem; minimized space */
+}
+
+/* Typing tagline */
+.tagline {
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  border-right: 2px solid black;
+  text-align: center;
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+  /* width: 0; */
+  /* animation: typing 2.2s steps(10, end) forwards; */
+}
+
+/* Animations */
+@keyframes fadeZoom {
+  to {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes logoZoom {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.impact-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 10;
+}
