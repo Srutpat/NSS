@@ -21,15 +21,29 @@
 import React, { useState } from "react";
 import Preloader from "./components/Preloader";
 import HomePage from "./HomePage"; // replace with your actual homepage component
+import Navbar from "./components/navbar";
+import { Outlet } from "react-router-dom";
+import './global.css'; // Import global styles
+
+// function App() {
+//   const [loaded, setLoaded] = useState(false);
+
+//   return (
+//     <>
+//        <Navbar />
+//       '{!loaded && <Preloader onFinish={() => setLoaded(true)} />},
+        
+//       {loaded && <HomePage />} '
+
+//     </>
+//   );
+// }
 
 function App() {
-  const [loaded, setLoaded] = useState(false);
-
   return (
     <>
-      {!loaded && <Preloader onFinish={() => setLoaded(true)} />},
-       {loaded && <HomePage />} 
-
+      <Navbar />
+      <Outlet /> {/* This renders the page based on current route */}
     </>
   );
 }

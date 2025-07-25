@@ -1,4 +1,4 @@
-import React from "react";
+  import React from "react";
 import "./HomePage.css";
 import "../src/global.css";
 import logo from "./assets/logo.png";
@@ -7,6 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Silk from "./components/SilkBackground";
 import { motion } from "framer-motion";
 import CircularText from "./components/CircularText";
+import { Link } from 'react-router-dom'
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -25,20 +26,20 @@ const staggerContainer = {
 const HomePage = () => {
   return (
     <motion.div className="container" initial="hidden" animate="visible" variants={staggerContainer}>
-      <motion.nav className="navbar" variants={fadeInUp}>
+      {/* <motion.nav className="navbar" variants={fadeInUp}>
         <div className="navbar-left">
           <img src={logo} alt="NSS Logo" />
           <h1>NSS PCCOE</h1>
         </div>
         <div className="navbar-right">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Achievements</a>
-          <a href="#">Team</a>
-          <a href="#">Winter Camp</a>
-          <a href="#">Contact Us</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="#">Achievements</Link>
+          <Link to="#">Team</Link>
+          <Link to="#">Winter Camp</Link>
+          <Link to="#">Contact Us</Link>
         </div>
-      </motion.nav>
+      </motion.nav> */}
 
       <section className="silk-hero-section">
         <div className="canvas-container">

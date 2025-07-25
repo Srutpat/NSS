@@ -1,0 +1,43 @@
+/* Navbar */
+.navbar {
+  background-color: #ffffff; /* Navy Blue */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left img {
+  height: 45px;
+  margin-right: 12px;
+}
+
+.navbar-left h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: bold;
+  color: #000000; /* Gold accent */
+}
+
+.navbar-right a {
+  margin-left: 1.5rem;
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar-right a:hover {
+  color: #FFD700; /* Gold accent */
+}

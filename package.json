@@ -10,22 +10,55 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@react-three/fiber": "^9.1.2",
     "framer-motion": "^12.16.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-responsive-carousel": "^3.2.23",
+=======
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.1.1",
+    "@mui/styled-engine-sc": "^7.1.1",
+    "@react-three/fiber": "^9.1.2",
+    "framer-motion": "^12.16.0",
+    "gsap": "^3.13.0",
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^7.6.2",
+    "styled-components": "^6.1.18",
+>>>>>>> 70f8b000973e449cf92723753084ee8b5c90cbc6
     "three": "^0.177.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+<<<<<<< HEAD
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
+=======
+    "@tailwindcss/postcss": "^4.1.9",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "autoprefixer": "^10.4.21",
+>>>>>>> 70f8b000973e449cf92723753084ee8b5c90cbc6
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+<<<<<<< HEAD
     "vite": "^6.3.5"
+=======
+    "postcss": "^8.5.5",
+    "tailwindcss": "^4.1.9",
+    "vite": "^6.3.5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+>>>>>>> 70f8b000973e449cf92723753084ee8b5c90cbc6
   }
 }

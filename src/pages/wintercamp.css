@@ -1,0 +1,165 @@
+/* wintercamp.css */
+
+.wintercamp {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url('../assets/IMAGE.jpg');
+  background-size: cover;
+  background-position:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1 rem;
+  border-radius: 20px;
+  text-align: start;
+  max-width: 900px;
+
+  /* Move the card up */
+  transform: translateY(-170px);
+}
+
+.hero-overlay h1 {
+ 
+  font-size: 3rem;
+  margin: 1rem;
+  /* margin-bottom: 1rem; */
+}
+
+.hero-overlay p {
+  font-size: 1.25rem;
+  /* margin-bottom: 1.5rem; */
+}
+
+.hero-overlay button {
+  background-color: #facc15;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-overlay button:hover {
+  background-color: #fde047;
+}
+
+/* About Section */
+.about {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: #fff;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+}
+
+.info-tags {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Activities Section */
+.activities {
+  background-color: #f9f9f9;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.activities h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.activity-card {
+  background: #fff;
+  padding: 2rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.activity-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.activity-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Impact Section */
+.impact {
+  background: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.impact h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.impact blockquote {
+  font-style: italic;
+  color: #555;
+  margin: 0 auto 2rem;
+  max-width: 600px;
+}
+
+.impact-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #eee;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
