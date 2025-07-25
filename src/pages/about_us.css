@@ -1,0 +1,193 @@
+:root {
+  --primary-color: #2e3a59;
+  --accent-color: #e56c20;
+  --text-color: #222;
+  --light-bg: #f9f9f9;
+  --card-bg: #ffffff;
+  --border-radius: 12px;
+  --transition: 0.3s ease-in-out;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --font-main: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+.about-container {
+  max-width: 100%;
+  margin: auto;
+
+  font-family: var(--font-main);
+  color: var(--text-color);
+}
+
+.about-section {
+  margin-bottom: 3rem;
+}
+
+.about-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  border-left: 4px solid var(--accent-color);
+  padding-left: 1rem;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+/* about section card */
+.about-section-card {
+  background-color: #fdfdfd;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  max-width:90%;
+  margin: 2rem auto;
+  animation: fadeIn 0.5s ease;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1.2;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1d2b47;
+  border-left: 4px solid #ff0000;
+  padding-left: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.about-text strong {
+  color: #1d2b47;
+}
+
+.about-image {
+   flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 300px;
+  scale: 1.2;
+  filter: drop-shadow(0 8px 16px rgba(255, 255, 255, 0.3));
+  object-fit: contain;
+  background: none;
+  border-radius: 0; /* Remove rounded corners */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 10px 20px rgba(255, 255, 255, 0.4)); /* optional hover glow */
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+
+
+/* Card */
+.about-cards-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-card {
+  flex: 1 1 300px;
+  max-width: 350px;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1d2b47;
+  font-weight: bold;
+  position: relative;
+}
+
+.about-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* From Uiverse.io by Tiagoadag */ 
+.card {
+  width: 190px;
+  height: 254px;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.card2 {
+  width: 190px;
+  height: 254px;
+  background-color: #616161;
+  border-radius: 5px;
+  transition: all 0.2s;
+  overflow: hidden;
+  position: relative;
+}
+
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
