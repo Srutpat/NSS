@@ -1,54 +1,87 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './about_us.css'; // Assuming you have a CSS file for styling
-import nssImage from '../assets/logo.png';
-const AboutUs = () => {
-  
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./about_us.css";
+import heroImage from "../assets/banner.jpeg";
+import SpotlightCard from "./SpotlightCard";
+
+function About() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   return (
     <div className="about-container">
-      <h1>About NSS - PCCoE</h1>
-
-      <section className="about-section-card">
-        <div className="about-content">
-          <div className="about-text">
-            <h2>About NSS</h2>
-            <p>
-              National Service Scheme comes under the Ministry of Youth Affairs and Sports, Government of India and NSS cell,
-              Higher and Technical Education, Govt. of Maharashtra. NSS was launched in Gandhiji's Centenary year, 1969-70.
-            </p>
-            <p>
-              Understanding the need of social development of youth from technical fields, NSS was started in 2008-09 in Pimpri
-              Chinchwad College of Engineering, Nigdi. The scheme aims to inculcate social welfare in students, and to provide
-              better service to society through voluntary work.
-            </p>
-            <p>
-              PCCoE NSS team performs social work through two verticals: <strong>Regular Activities</strong> and <strong>Special Winter Camp</strong>.
-            </p>
-          </div>
-          <div className="about-image">
-            <img src={nssImage} alt="NSS Activity" />
-          </div>
+      <header
+        className="about-hero"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      >
+        <div className="about-hero-content">
+          <h1>About National Service Scheme (NSS)</h1>
+          <p>“Not me but you” – Building a better society through service</p>
         </div>
-        <div className="about-cards-container">
-          <div className="about-card">
-            <h3>Objective</h3>
-            <p>
-              To inculcate social values and social awareness among students and serve the society.
-            </p>
-          </div>
+      </header>
 
-          <div className="about-card">
-            <h3>Outcome</h3>
-            <p>
-              Judged by number of students enrolled vs those benefited.
-            </p>
+      <section className="mission-vision-section" data-aos="fade-up">
+  <div className="mission-vision-card">
+    <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.15)">
+      <h2>Our Mission</h2>
+      <p>
+        To instill the spirit of voluntary service and community engagement among students,
+        promoting social awareness, leadership, and nation-building.
+      </p>
+    </SpotlightCard>
+
+    <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(255, 94, 98, 0.15)">
+      <h2>Our Vision</h2>
+      <p>
+        Creating a generation of responsible and active citizens dedicated to improving the
+        quality of life in rural and urban communities through inclusive and sustainable
+        development.
+      </p>
+    </SpotlightCard>
+  </div>
+</section>
+      <section className="about-activities" data-aos="fade-up">
+        <h2>What We Do</h2>
+        <ul>
+          <li>Organize cleanliness drives and health check-up camps</li>
+          <li>Conduct awareness campaigns (environment, education, gender, etc.)</li>
+          <li>Host blood donation drives and tree plantations</li>
+          <li>Support education for underprivileged children</li>
+          <li>Promote sustainable practices through workshops and events</li>
+        </ul>
+      </section>
+
+      <section className="about-values" data-aos="fade-right">
+        <h2>Our Core Values</h2>
+        <div className="values-grid">
+          <div className="value-box" data-aos="zoom-in">
+            <h3>Service</h3>
+            <p>Helping communities with dedication and empathy.</p>
+          </div>
+          <div className="value-box" data-aos="zoom-in">
+            <h3>Leadership</h3>
+            <p>Empowering youth to lead social change initiatives.</p>
+          </div>
+          <div className="value-box" data-aos="zoom-in">
+            <h3>Unity</h3>
+            <p>Building bridges between diverse groups and backgrounds.</p>
+          </div>
+          <div className="value-box" data-aos="zoom-in">
+            <h3>Empowerment</h3>
+            <p>Developing confidence and skills in volunteers and communities.</p>
           </div>
         </div>
       </section>
-    </div>
-    
-  );
-};
 
-export default AboutUs;
+      <section className="about-cta" data-aos="fade-up">
+        <h2>Join NSS, Be the Change!</h2>
+        <p>Become a part of our journey to make India cleaner, healthier, and more inclusive.</p>
+        <button onClick={() => alert("Redirect to Join Form or Info")}>Get Involved</button>
+      </section>
+    </div>
+  );
+}
+
+export default About;

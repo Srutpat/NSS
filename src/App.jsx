@@ -1,49 +1,35 @@
-// import React, { useState } from "react";
-// import Preloader from "./components/Preloader";
-
-// function App() {
-//   const [loading, setLoading] = useState(true);
-
-//   return (
-//     <>
-//       {loading && <Preloader onFinish={() => setLoading(false)} />}
-//       {!loading && (
-//         <div>
-//           {/* Actual homepage content goes here */}
-//           <h1 style={{ textAlign: "center", marginTop: "40vh" }}>Welcome to NSS Website</h1>
-//         </div>
-//       )}
-//     </>
-//   );
-// }
-
-// export default App;
-import React, { useState } from "react";
-import Preloader from "./components/Preloader";
-import HomePage from "./HomePage"; // replace with your actual homepage component
-import Navbar from "./components/navbar";
+// App.jsx
+import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import './global.css'; // Import global styles
-
-// function App() {
-//   const [loaded, setLoaded] = useState(false);
-
-//   return (
-//     <>
-//        <Navbar />
-//       '{!loaded && <Preloader onFinish={() => setLoaded(true)} />},
-        
-//       {loaded && <HomePage />} '
-
-//     </>
-//   );
-// }
+import Navbar from "./components/Navbar";
+import Preloader from "./components/Preloader";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./global.css"; // make sure this contains only global styles
 
 function App() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 2500); // simulate loading time
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      <Navbar />
-      <Outlet /> {/* This renders the page based on current route */}
+     
+        <>
+          <Navbar />
+          <Outlet /> {/* Current page will be rendered here based on the route */}
+        </>
+      
     </>
   );
 }

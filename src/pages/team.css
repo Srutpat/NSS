@@ -1,140 +1,121 @@
 :root {
-  --primary-color: #2e3a59;
-  --accent-color: #e56c20;
-  --text-color: #222;
-  --light-bg: #f9f9f9;
-  --card-bg: #ffffff;
-  --border-radius: 12px;
-  --transition: 0.3s ease-in-out;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --font-main: 'Poppins', 'Segoe UI', sans-serif;
+  --primary-color: #222;
+  --accent-color: #0acffe;
+  --dark-bg: #111;
+  --hover-bg: rgba(0, 0, 0, 0.7);
+  --font: 'Poppins', sans-serif;
 }
 
-.about-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 3rem 1.5rem;
-  font-family: var(--font-main);
-  color: var(--text-color);
+.team-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: var(--font);
 }
 
-.about-section {
-  margin-bottom: 3rem;
-}
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4.5rem;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.card {
-  width: 230px;
-  height: 300px;
-  background-image: linear-gradient(163deg, #eb1919 0%, #3700ff 100%);
-  border-radius: 20px;
-  transition: all 0.3s;
-  position: relative;
-}
-
-.card2 {
-  width: 230px;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-  position: relative;
+.po-section {
   display: flex;
   align-items: center;
+  gap: 1.5rem;
+  background: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.po-section img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.po-details h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.po-details p {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.team-selector {
+  display: flex;
   justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-.card2:hover {
-  transform: scale(0.98);
-  border-radius: 20px;
+.team-selector button {
+  background: none;
+  border: 2px solid var(--accent-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.card:hover {
-  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
-}
-
-.card-content {
-  width: 100%;
-  height: 100%;
-  padding: 16px;
-  text-align: center;
+.team-selector .active,
+.team-selector button:hover {
+  background-color: var(--accent-color);
   color: white;
-  background-color: rgba(53, 52, 52, 0.8); /* dark overlay */
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.card2:hover {
-  background-image: none; /* hide image */
-  background-color: #616161; /* fallback bg */
 }
 
-.card2:hover .card-content {
-  opacity: 1;
-  transform: translateY(0);
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
 }
 
-.role {
-  font-size: 14px;
-  font-weight: bold;
+.team-card {
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.batch {
-  font-size: 13px;
-  margin-bottom: 0.5rem;
-  color: #cfcfcf;
-}
 .card-image {
   width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-.contact-info {
-  margin-top: 10px;
-  font-size: 12px;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: 0.4s ease;
 }
 
-.social-links {
-  margin-top: 8px;
+.card-hover {
+  position: absolute;
+  inset: 0;
+  background-color: var(--hover-bg);
+  color: white;
+  opacity: 0;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-}
-
-.social-links a {
-  color: #2237bc;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s ease;
-}
-
-.social-links a:hover {
-  color: #ffffff;
-}
-.card-footer {
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  padding: 1rem;
   text-align: center;
-  margin-top: 0.5rem;
-  color: #000000;
-  font-family: var(--font-main);
 }
 
-.member-name {
-  font-size: 16px;
-  font-weight: bold;
+.card-hover h3 {
   margin: 0;
+  font-size: 1rem;
 }
 
-.member-role {
-  font-size: 14px;
-  color: #000000;
-  margin: 2px 0 0;
+.card-hover p {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+}
+
+.card-image:hover .card-hover {
+  opacity: 1;
+  transform: scale(1.02);
 }
