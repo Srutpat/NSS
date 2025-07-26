@@ -9,6 +9,7 @@ import Wintercamp from './pages/wintercamp.jsx'; // Import the CSS for Winter Ca
 import './index.css'; // Import your global styles
 import App from './App.jsx'
 import './global.css'; // Import global styles
+import Contact from './pages/contactus.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="about" element={<AboutUs />} />
           <Route path="team" element={<Team />} />
           <Route path="winter" element={<Wintercamp />} />
+          <Route path="contact" element={<Contact />} />
           {/* Add more nested routes here */}
         </Route>
       </Routes>
