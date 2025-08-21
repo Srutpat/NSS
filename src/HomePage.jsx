@@ -41,40 +41,41 @@ const HomePage = () => {
         </div>
       </motion.nav> */}
 
-      <section className="silk-hero-section">
-        <div className="canvas-container">
-          <Silk
-            color="#E56C20"
-            speed={4}
-            scale={1.2}
-            noiseIntensity={1.8}
-            rotation={0.2}
-          />
-        </div>
-        <div className="silk-hero-content">
-          <div className="hero-left">
-            <CircularText
-              text="NSS * We Build Nation * "
-              spinDuration={15}
-              className="hero-circle"
-            />
-          </div>
-          <div className="hero-right">
-            <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-              Not Me But You
-            </motion.h2>
-            <p className="hero-tagline">
-              Join our mission to uplift communities and empower lives.
-            </p>
-            <div className="stats">
-              <div><strong>1000+</strong> Volunteers</div>
-              <div><strong>50+</strong> Events</div>
-              <div><strong>20+</strong> Awards</div>
-            </div>
-            <button className="join-nss-btn">Join NSS</button>
-          </div>
-        </div>
-      </section>
+      <section className="silk-hero-wrapper">
+  <div className="silk-bg-layer">
+    <Silk
+      color="#E56C20"
+      speed={4}
+      scale={1.2}
+      noiseIntensity={1.8}
+      rotation={0.2}
+    />
+  </div>
+
+  <div className="silk-hero-content">
+    <div className="hero-left">
+      <CircularText
+        text="NSS * We Build Nation * "
+        spinDuration={15}
+        className="hero-circle"
+      />
+    </div>
+    <div className="hero-right">
+      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+        Not Me But You
+      </motion.h2>
+      <p className="hero-tagline">
+        Join our mission to uplift communities and empower lives.
+      </p>
+      <div className="stats">
+        <div><strong>1000+</strong> Volunteers</div>
+        <div><strong>50+</strong> Events</div>
+        <div><strong>20+</strong> Awards</div>
+      </div>
+      <button className="join-nss-btn">Join NSS</button>
+    </div>
+  </div>
+</section>
 
       <motion.section className="carousel-section" variants={fadeInUp}>
         <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>

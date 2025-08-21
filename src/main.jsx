@@ -5,7 +5,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AboutUs from './pages/about_us.jsx';
 import Team from'./pages/team.jsx'; // Import the CSS for About Us page
 import HomePage from './HomePage.jsx';
-import Wintercamp from './pages/wintercamp.jsx'; // Import the CSS for Winter Camp page
+import Wintercamp from './pages/wintercamp.jsx';
+import Activities from './pages/Activities.jsx'; // Import the CSS for Winter Camp page
 import './index.css'; // Import your global styles
 import App from './App.jsx'
 import './global.css'; // Import global styles
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="team" element={<Team />} />
           <Route path="winter" element={<Wintercamp />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="activities" element={<Activities />} />
           {/* Add more nested routes here */}
         </Route>
       </Routes>
