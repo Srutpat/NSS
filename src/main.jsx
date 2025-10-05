@@ -7,10 +7,11 @@ import Team from'./pages/team.jsx'; // Import the CSS for About Us page
 import HomePage from './HomePage.jsx';
 import Wintercamp from './pages/wintercamp.jsx';
 import Activities from './pages/Activities.jsx'; // Import the CSS for Winter Camp page
-import './index.css'; // Import your global styles
+// import './index.css'; // Import your global styles
 import App from './App.jsx'
 import './global.css'; // Import global styles
 import Contact from './pages/contactus.jsx';
+import "./global.css";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

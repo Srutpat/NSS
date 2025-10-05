@@ -1,6 +1,6 @@
   import React from "react";
 import "./HomePage.css";
-import "../src/global.css";
+// import "../src/global.css";
 import logo from "./assets/logo.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -8,6 +8,7 @@ import Silk from "./components/SilkBackground";
 import { motion } from "framer-motion";
 import CircularText from "./components/CircularText";
 import { Link } from 'react-router-dom'
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -60,10 +61,12 @@ const HomePage = () => {
         className="hero-circle"
       />
     </div>
-    <div className="hero-right">
-      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-        Not Me But You
-      </motion.h2>
+    <div className="bungee-spice-regular">
+      <motion.h2 initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
+  Not Me But You
+</motion.h2>
+
+      
       <p className="hero-tagline">
         Join our mission to uplift communities and empower lives.
       </p>
@@ -77,7 +80,7 @@ const HomePage = () => {
   </div>
 </section>
 
-      <motion.section className="carousel-section" variants={fadeInUp}>
+      {/* <motion.section className="carousel-section" variants={fadeInUp}>
         <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
           <div className="carousel-slide">
             <img src="src/assets/events/event1.jpeg" alt="Event 1" />
@@ -95,7 +98,7 @@ const HomePage = () => {
             <p>Inspired over 1000 students through street plays and campaigns.</p>
           </div>
         </Carousel>
-      </motion.section>
+      </motion.section> */}
 
       <motion.section className="quote-section" variants={fadeInUp}>
         <em>
